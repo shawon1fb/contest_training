@@ -8,4 +8,5 @@
     4. kth largest element in array
     5. One Integer
     
-    
+## DAY -2
+    1. maximum score from removing stons
