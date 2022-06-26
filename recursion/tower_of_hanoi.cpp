@@ -15,6 +15,8 @@
 /// then go to c  B-> C with help A
 
 
+/// A-> B using C
+///  B-> C using A
 using namespace std;
 
 
