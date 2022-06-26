@@ -17,13 +17,8 @@ int distributeCandies(vector<int> candies) {
 
 
 int main() {
-
-
     vector<int> candies = {1, 1, 2, 2, 3, 3,};
-
     int result = distributeCandies(candies);
-
     cout << result << "\n";
-
     return 0;
 }
