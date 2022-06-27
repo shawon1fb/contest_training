@@ -15,3 +15,4 @@
 ## DAY -3
 
     1. Distinct Candies
+    2. tower of hanoi

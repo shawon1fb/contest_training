@@ -1,12 +1,7 @@
 //
 // Created by shahanul on 26/6/22.
 //
-
-
 #include<bits/stdc++.h>
-
-
-
 
 /// problem  simple
 /// let A B C is three rod
