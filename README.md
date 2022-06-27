@@ -19,3 +19,4 @@
 
 ## DAY -4
     1. letter combinations of a phone
+    2. permuations
