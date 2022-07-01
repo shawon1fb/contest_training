@@ -23,3 +23,4 @@
 
 ## DAY -5
     1. brackets
+    2. find k closest element
