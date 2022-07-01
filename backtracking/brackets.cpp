@@ -17,7 +17,6 @@ void generateBrackets(string output, int n, int open, int close, int pos) {
 
     /// opening bracket
 
-
     if (open < n) {
         output += '(';
         generateBrackets(output, n, open + 1, close, pos + 1);
