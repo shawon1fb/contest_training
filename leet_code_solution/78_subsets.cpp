@@ -8,31 +8,20 @@ using namespace std;
 
 int cnt =0;
 void subsetsUtil(vector<int> &A, vector<vector<int> > &res,
-                 vector<int> &subset, int index, int j) {
+                 vector<int> &subset, int index) {
 
-//    cout<<index<<" "<<j<<endl;
-
-        res.push_back(subset);
-    if (A.size() == index +1) {
+  if (A.size() == index ) {
         cnt++;
-//        res.push_back(subset);
+        res.push_back(subset);
         return;
     }
 
-    subset.clear();
-    for (int i = j; i < A.size(); i++) {
-        subset.push_back(A[i]);
+    subset.push_back(A[index]);
+    subsetsUtil(A, res, subset, index + 1 );
 
-    }
-//    subset.push_back(A[j]);
-//    res.push_back(subset);
+    subset.pop_back();
+    subsetsUtil(A, res, subset, index + 1);
 
-    subsetsUtil(A, res, subset, index + 1, j + 1);
-//    subset.pop_back();
-    subsetsUtil(A, res, subset, index + 1, j);
-
-
-    return;
 }
 
 // below function returns the subsets of vector A.
@@ -41,9 +30,7 @@ vector<vector<int> > subsets(vector<int> &A) {
     vector<vector<int> > res;
 
     // keeps track of current element in vector A;
-    subsetsUtil(A, res, subset, 0, 0);
-
-    cout<<cnt<<endl;
+    subsetsUtil(A, res, subset, 0);;
     return res;
 }
 
