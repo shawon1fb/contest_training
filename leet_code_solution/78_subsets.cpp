@@ -6,33 +6,34 @@
 
 using namespace std;
 
-int cnt =0;
-void subsetsUtil(vector<int> &A, vector<vector<int> > &res,
-                 vector<int> &subset, int index) {
+class Solution {
+public:
 
-  if (A.size() == index ) {
-        cnt++;
-        res.push_back(subset);
-        return;
+    void subsetUtils(vector<int> &nums, vector<vector<int>> &res, vector<int> subset, int i) {
+
+        if (i == nums.size()) {
+            res.push_back(subset);
+            return;
+        }
+
+        subset.push_back(nums[i]);
+        subsetUtils(nums, res, subset, i + 1);
+        subset.pop_back();
+        subsetUtils(nums, res, subset, i + 1);
+
+
     }
 
-    subset.push_back(A[index]);
-    subsetsUtil(A, res, subset, index + 1 );
+    vector<vector<int>> subsets(vector<int> &nums) {
+        vector<vector<int>> res;
+        vector<int> subset;
+        subsetUtils(nums, res, subset, 0);
 
-    subset.pop_back();
-    subsetsUtil(A, res, subset, index + 1);
+//    cout << "ok";
+        return res;
+    }
+};
 
-}
-
-// below function returns the subsets of vector A.
-vector<vector<int> > subsets(vector<int> &A) {
-    vector<int> subset;
-    vector<vector<int> > res;
-
-    // keeps track of current element in vector A;
-    subsetsUtil(A, res, subset, 0);;
-    return res;
-}
 
 // Driver Code.
 int main() {
@@ -43,7 +44,7 @@ int main() {
     // O(2 ^ (number of elements inside array))
     // because at every step we have two choices
     // either include or ignore.
-    vector<vector<int> > res = subsets(array);
+    vector<vector<int> > res = Solution().subsets(array);
 
     // Print result
     for (int i = 0; i < res.size(); i++) {
