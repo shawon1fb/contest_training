@@ -9,12 +9,14 @@
 /// so i will go to rod b first A-> B with help C
 /// then go to c  B-> C with help A
 
-
 /// A-> B using C
 ///  B-> C using A
 using namespace std;
 
-
+/// n = number of item
+/// A = from [start point]
+/// B = using [temp rod]
+/// c = to  [destination]
 void towerOfHanoi(int n, char A, char B, char C) {
     if (n == 0) return;
     towerOfHanoi(n - 1, A, C, B);
