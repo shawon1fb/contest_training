@@ -20,4 +20,5 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(contest_training  recursion/tower_of_hanoi.cpp)
 
 
-add_executable(contest_training leet_code_solution/78_subsets.cpp)
+#add_executable(contest_training leet_code_solution/78_subsets.cpp )
+add_executable(contest_training binary_search/binary_search.cpp)
