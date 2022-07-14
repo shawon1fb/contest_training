@@ -22,4 +22,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 #add_executable(contest_training leet_code_solution/78_subsets.cpp )
 #add_executable(contest_training binary_search/binary_search.cpp)
-add_executable(contest_training binary_search/lower_bound_binary_search.cpp)
+#add_executable(contest_training binary_search/lower_bound_binary_search.cpp )
+add_executable(contest_training binary_search/upper_bound_binary_search.cpp)
