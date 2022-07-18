@@ -24,3 +24,6 @@
 ## DAY -5
     1. brackets
     2. find k closest element
+
+## DAY -6
+    1.angry birds
