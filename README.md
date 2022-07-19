@@ -27,3 +27,6 @@
 
 ## DAY -6
     1.angry birds
+
+## DAY -7
+    1.valid perfect square
